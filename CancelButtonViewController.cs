@@ -66,8 +66,8 @@ namespace PlayFirst
                 screen.HandleSide = FloatingScreen.Side.Right;
                 screen.ShowHandle = true;
                 screen.HighlightHandle = true;
-                screen.handle.transform.localScale = Vector3.one * 2.0f;
-                screen.handle.transform.localPosition = new Vector3(40.0f, 0.0f, 0.0f);
+                screen.Handle.transform.localScale = Vector3.one * 2.0f;
+                screen.Handle.transform.localPosition = new Vector3(40.0f, 0.0f, 0.0f);
                 screen.HandleReleased += Screen_HandleReleased;
             }
 

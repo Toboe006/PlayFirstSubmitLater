@@ -4,6 +4,8 @@
 Ever received trolly requests that you regret entertaining and now you have crap all over your ScoreSaber? Or is 14star OV forever dragging down your rank acc because your friends ran the map in MP (back in the day) while you went to eat? Now you can stop it from happening again! 
 This mod means you can play all the shitmaps and practice high stars with reckless abandon. No longer will you scream when finally pass OV but it was in practice mode or when you didn't manage to click Pause fast enough to quit a bad map.
 
+**This branch (`BS_1.40.8`) targets Beat Saber 1.40.8** (BSML 1.12.5, BS Utils, SiraUtil).
+
 ## New Features for v2.0.0+ (1.29.0+ Only)
 - Option to always show and use Pause Menu UI, independent of any toggles
 - Option to reposition Pause Menu UI
