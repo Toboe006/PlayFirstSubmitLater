@@ -16,8 +16,13 @@ namespace PlayFirst
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private ModifierUI()
+        private readonly GameplaySetup gameplaySetup;
+
+        // BSML 1.12+ no longer has GameplaySetup.instance: it is injected by Zenject instead
+        private ModifierUI(GameplaySetup gameplaySetup)
         {
+            this.gameplaySetup = gameplaySetup;
+
             if (PluginConfig.Instance.betternofail_enabled)
                 bnf_col = "<#00ff00>Better NoFail";
             else
@@ -36,16 +41,16 @@ namespace PlayFirst
 
         public void Initialize()
         {
-            GameplaySetup.instance.AddTab("PlayFirst", "PlayFirst.modifierUI.bsml", this);
+            gameplaySetup.AddTab("PlayFirst", "PlayFirst.modifierUI.bsml", this);
             Donate.Refresh_Text();
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Donate_Update_Dynamic)));
         }
 
         public void Dispose()
         {
-            if (GameplaySetup.instance != null)
+            if (gameplaySetup != null)
             {
-                GameplaySetup.instance.RemoveTab("PlayFirst");
+                gameplaySetup.RemoveTab("PlayFirst");
             }
         }
 
