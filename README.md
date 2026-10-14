@@ -35,6 +35,13 @@ This mod means you can play all the shitmaps and practice high stars with reckle
 ![screenshot](https://github.com/zeph-yr/PlayFirstSubmitLater/blob/BS_1.31.0/Screenshots/1.1.0_menu_2.png)
 ![screenshot](https://github.com/zeph-yr/PlayFirstSubmitLater/blob/main/menu_1a_small.png)
 
+## Building (1.40.8 branch)
+- Open `PlayFirst.sln` in Visual Studio (needs the .NET Framework 4.7.2 targeting pack) and build **Release**.
+- The project looks for the game in `..\Refs` if that folder exists, otherwise `C:\Program Files (x86)\Steam\steamapps\common\Beat Saber`. Edit `BeatSaberDir` in `PlayFirst.csproj` if yours is elsewhere. The game folder must already have BSIPA, BSML 1.12.5, BS Utils and SiraUtil installed.
+- Output: `bin\Release\PlayFirst.dll`. Copy it to `Beat Saber\Plugins`.
+- If NuGet restore fails with "Unable to find package BeatSaberModdingTools.Tasks" (nuget.org source disabled), enable nuget.org under Tools > NuGet Package Manager > Package Manager Settings > Package Sources, or delete that `PackageReference` from the csproj. It is optional for compiling.
+- BSML 1.13+ requires Beat Saber 1.40.9+, so stay on BSML 1.12.5 for 1.40.8.
+
 ## About
 Copyright © 2021 - 2023 Zephyr | www.xephai.com
 
